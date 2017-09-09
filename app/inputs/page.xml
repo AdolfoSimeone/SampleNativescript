@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+    xmlns:sidebar="components/sidebar"
+    xmlns:dd="nativescript-drop-down"
+    xmlns:cb="nativescript-checkbox"
+    navigatingTo="onNavigatingTo">
+      
+    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="left">
+        <drawer:RadSideDrawer.drawerContent>
+            <sidebar:sidebar />
+        </drawer:RadSideDrawer.drawerContent>
+        <drawer.RadSideDrawer.mainContent>
+            <ScrollView orientation="vertical">
+                <StackLayout>
+                    <Label text="Text Field" horizontalAlignment="center" />
+                    <TextField text="{{ smallText }}" hint="Text field input" />
+
+                    <Label text="Text View" horizontalAlignment="center" />
+                    <TextView text="{{ largeText }}" hint="Text view input" />
+
+                    <Label text="Dropdown List" horizontalAlignment="center" />
+                    <dd:DropDown items="{{ names }}" selectedIndex="{{ index }}" />
+                    <Label text="{{ index, 'Selected: ' + items[index].name + ' - ' + items[index].alias }}" />
+                    
+                    <Label text="Checkbox" horizontalAlignment="center" />
+                    <cb:CheckBox text="{{ isChecked, isChecked ? 'Checkbox selected' : 'Checkbox unselected' }}" checked="{{ isChecked }}" />
+
+                    <Button text="Submit" tap="{{ submit }}" />
+                </StackLayout>
+            </ScrollView>
+        </drawer.RadSideDrawer.mainContent>
+    </drawer:RadSideDrawer>    
+</Page>

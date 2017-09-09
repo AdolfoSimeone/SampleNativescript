@@ -1,0 +1,14 @@
+<StackLayout class="sidebar">
+    <StackLayout class="sidebar-item" orientation="horizontal" tap="mainMenu">
+        <Label text="Main" />
+    </StackLayout>
+    <StackLayout class="sidebar-item" orientation="horizontal" tap="inputSample">
+        <Label text="Input fields sample" />
+    </StackLayout>
+    <StackLayout class="sidebar-item" orientation="horizontal" tap="verticalListSample">
+        <Label text="Vertical list sample" />
+    </StackLayout>
+    <StackLayout class="sidebar-item" orientation="horizontal" tap="horizontalListSample">
+        <Label text="Hozizontal list sample" />
+    </StackLayout>
+</StackLayout>

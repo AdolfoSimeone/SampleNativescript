@@ -1,0 +1,29 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+    xmlns:sidebar="components/sidebar"
+    xmlns:lv="nativescript-telerik-ui/listview"
+    navigatingTo="onNavigatingTo">
+      
+    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="left">
+        <drawer:RadSideDrawer.drawerContent>
+            <sidebar:sidebar />
+        </drawer:RadSideDrawer.drawerContent>
+        <drawer.RadSideDrawer.mainContent>
+            <ScrollView orientation="vertical">
+                <StackLayout>
+                    <lv:RadListView selectionBehavior="Press" items="{{ items }}" >			
+                        <lv:RadListView.listViewLayout>
+                            <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                        </lv:RadListView.listViewLayout>
+                        <lv:RadListView.itemTemplate>
+                            <StackLayout margin="10">
+                                <Label text="{{ name }}" />
+                                <Label text="{{ description }}" />
+                            </StackLayout>
+                        </lv:RadListView.itemTemplate>
+                    </lv:RadListView>
+                </StackLayout>
+            </ScrollView>
+        </drawer.RadSideDrawer.mainContent>
+    </drawer:RadSideDrawer>    
+</Page>

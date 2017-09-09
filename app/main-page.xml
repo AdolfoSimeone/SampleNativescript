@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+    xmlns:sidebar="components/sidebar"
+    navigatingTo="onNavigatingTo">
+      
+    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="left">
+        <drawer:RadSideDrawer.drawerContent>
+            <sidebar:sidebar />
+        </drawer:RadSideDrawer.drawerContent>
+        <drawer.RadSideDrawer.mainContent>
+            <ScrollView orientation="vertical">
+                <StackLayout>
+                    <Button text="Input fields sample" tap="{{ inputSample }}" />
+                    <Button text="Vertical list sample" tap="{{ verticalListSample }}" />
+                    <Button text="Horizontal list sample" tap="{{ horizontalListSample }}" />
+                </StackLayout>
+            </ScrollView>
+        </drawer.RadSideDrawer.mainContent>
+    </drawer:RadSideDrawer>    
+</Page>
